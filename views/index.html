@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.1.0/dist/full.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+    <!-- Include Tailwind CSS and DaisyUI scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.1.0/dist/full.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <div class="mockup-window bg-base-300">
+      <!-- Navbar -->
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">Cris</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img alt="Tailwind CSS Navbar component" src="image/avatar.jpg" />
+              </div>
+            </label>
+            <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+              <li>
+                <a href="/about" class="justify-between">
+                  About
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a class="justify-between"
+                  >Switch Theme<input type="checkbox" value="synthwave" class="toggle theme-controller"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portrait -->
+      <div class="container mx-auto">
+        <div class="hero min-h-screen bg-base-200">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="/image/portrait.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+            <div>
+              <h1 class="text-5xl font-bold">Hello, It's me</h1>
+              <br />
+              <h1 class="text-5xl font-bold text-pink-500">Cris Huynh</h1>
+              <br />
+              <h1 class="text-5xl font-bold text-lime-500">I'm a <span class="text"></span></h1>
+              <br />
+              <p class="py-6">Software Developer with extensive experience for nearly 3 years</p>
+
+              <div class="social-media">
+                <a href="https://www.facebook.com/khang.huynh.2307" target="_blank" style="--i: 6"
+                  ><i class="bx bxl-facebook"></i
+                ></a>
+                <a href="https://www.instagram.com/cr_khangh/" target="_blank" style="--i: 7"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/cris-huynh-2a52b5274/" target="_blank" style="--i: 8"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+                <a href="https://github.com/CrisH2307" target="_blank" style="--i: 8"><i class="bx bxl-github"></i></a>
+              </div>
+              <a href="#" class="cvbutton">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var typed = new Typed(".text", {
+        strings: ["M.E.R.N Full Stack Developer"],
+        typeSpeed: 85,
+        backSpeed: 85,
+        backDelay: 1000,
+        loop: true,
+      });
+    </script>
+    <style>
+      :root {
+        --bg-color: #1f242d;
+        --second-bg-color: #323946;
+        --text-color: #fff;
+        --main-color: #ff28e9;
+      }
+
+      /* Social media styles */
+      .social-media a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 2px solid var(--main-color);
+        border-radius: 50%;
+        font-size: 20px;
+        color: var(--main-color);
+        text-decoration: none;
+        margin: 30px 15px 30px 0;
+        transition: 0.5s ease;
+        animation: slideLeft 1s ease forwards;
+        animation-delay: calc(0.2s * var(--i));
+        position: relative; /* Added to enable positioning of pseudo-elements */
+      }
+
+      /* Social media styles on hover */
+      .social-media a:hover {
+        color: var(--text-color);
+        box-shadow: 0 0 0 2px transparent, 0 0 12px var(--main-color); /* Adjust the box-shadow */
+      }
+
+      /* Social media styles before and after pseudo-elements */
+      .social-media a:before {
+        content: "";
+        background: linear-gradient(
+          65deg,
+          #ff0000,
+          #ff7300,
+          #fffb00,
+          #48ff00,
+          #00ffd5,
+          #002bff,
+          #7a00ff,
+          #ff00c8,
+          #ff0000
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 10px;
+      }
+
+      .social-media a:active {
+        color: #000;
+      }
+
+      .social-media a:active:after {
+        background: transparent;
+      }
+
+      .social-media a:hover:before {
+        opacity: 1;
+      }
+
+      .social-media a:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        color: var(--text-color);
+        left: 0;
+        top: 0;
+        border-radius: 22px;
+      }
+
+      /* Button styles */
+      .cvbutton {
+        display: inline-block;
+        padding: 10px 28px;
+        background-color: transparent;
+        border-radius: 40px;
+        color: var(--main-color);
+        font-size: 16px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        font-weight: 700;
+        opacity: 1;
+        animation: slideTop 1s ease forwards;
+        animation-delay: 2s;
+        transition: 0.5s ease;
+        position: relative; /* Added to enable positioning of pseudo-elements */
+      }
+
+      .cvbutton:before {
+        content: "";
+        background: linear-gradient(
+          45deg,
+          #ff0000,
+          #ff7300,
+          #fffb00,
+          #48ff00,
+          #00ffd5,
+          #002bff,
+          #7a00ff,
+          #ff00c8,
+          #ff0000
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 10px;
+      }
+
+      .cvbutton:active {
+        color: #000;
+      }
+      /* Button styles on click */
+      .cvbutton:active:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #1f242d; /* Change the color on click */
+        border-radius: 22px;
+      }
+
+      .cvbutton:active:after {
+        background: transparent;
+      }
+
+      .cvbutton:hover:before {
+        opacity: 1;
+      }
+
+      .cvbutton:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        left: 0;
+        top: 0;
+        border-radius: 22px;
+      }
+
+      @keyframes glowing {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+    </style>
+
+    <!-- MockUP -->
+    <div class="mockup-code">
+      <pre data-prefix="$"><code>npm install to be a developer</code></pre>
+      <pre data-prefix=">" class="text-warning"><code></code></pre>
+      <pre data-prefix=">" class="text-success"><code>Be Happy and Never Gonna Stop!</code></pre>
+    </div>
+    <style>
+      .mockup-code {
+        max-width: 700px; /* Adjust the max-width as needed */
+        margin: 0 auto; /* Center the container */
+        padding: 20px; /* Add padding for spacing */
+      }
+
+      /* Optional: Adjust the font size or other styles for better appearance */
+      .mockup-code pre {
+        font-size: 16px;
+        /* Add any other styling you need */
+      }
+    </style>
+    <script>
+      var typed = new Typed(".text-warning code", {
+        strings: [
+          "Any fool can write code that a computer can understand",
+          "Good programmers write code that humans can understand",
+          "Experience is the name everyone gives to their mistakes.",
+          "Knowledge is power.",
+          "Make it work, make it right, make it fast.",
+        ],
+        typeSpeed: 85,
+        backSpeed: 85,
+        backDelay: 1000,
+        loop: true,
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+      <nav class="grid grid-flow-col gap-4">
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <div class="grid grid-flow-col gap-4">
+          <a
+            ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg
+          ></a>
+          <a
+            ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg
+          ></a>
+          <a
+            ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg
+          ></a>
+        </div>
+      </nav>
+      <aside>
+        <p>Crisnineball© 2023 - All right reserved by ACME Industries Ltd</p>
+      </aside>
+    </footer>
+
+    <!-- <h1>Welcome Home</h1>
+    <p>...</p>
+    <p><a href="/about">About the Company</a></p> -->
+  </body>
+</html>
