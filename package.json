@@ -11,11 +11,12 @@
     "tailwindcss": "^0.7.4"
   },
   "scripts": {
-    "tw:build": "tailwindcss build -i ./public/css/tailwind.css -o ./public/css/main.css"
+    "tw:build": "tailwindcss build -i ./public/css/tailwind.css -o ./public/css/main.css",
+    "start": "node server.js"
   },
   "name": "my-profolio-3",
   "version": "1.0.0",
-  "main": "tailwind.config.js",
+  "main": "server.js",
   "author": "Cris Huynh",
   "license": "ISC",
   "description": ""
